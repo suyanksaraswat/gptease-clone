@@ -2,6 +2,9 @@
 
 An AI-powered content assistant for creators — built with TanStack Start, React 19, Tailwind CSS v4, and deployed on Cloudflare Workers.
 
+**Live:** https://gptease-clone.gptease.workers.dev
+**GitHub:** https://github.com/suyanksaraswat/gptease-clone
+
 ---
 
 ## Pages

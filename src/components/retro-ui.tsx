@@ -11,10 +11,13 @@ interface RetroButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-primary text-primary-foreground retro-border retro-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:retro-shadow-lg",
-  outline: "bg-background text-foreground retro-border retro-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:retro-shadow-lg",
-  accent:  "bg-accent text-accent-foreground retro-border retro-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:retro-shadow-lg",
-  ghost:   "bg-transparent text-foreground hover:bg-secondary",
+  primary:
+    "bg-primary text-primary-foreground retro-border retro-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:retro-shadow-lg",
+  outline:
+    "bg-background text-foreground retro-border retro-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:retro-shadow-lg",
+  accent:
+    "bg-accent text-accent-foreground retro-border retro-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:retro-shadow-lg",
+  ghost: "bg-transparent text-foreground hover:bg-secondary",
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -53,9 +56,6 @@ export function RetroInput({ className, ...props }: React.InputHTMLAttributes<HT
 
 export function RetroCard({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div
-      className={cn("rounded-sm bg-card p-6 retro-border retro-shadow", className)}
-      {...props}
-    />
+    <div className={cn("rounded-sm bg-card p-6 retro-border retro-shadow", className)} {...props} />
   );
 }

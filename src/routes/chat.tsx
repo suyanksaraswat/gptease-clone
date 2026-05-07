@@ -5,6 +5,7 @@ import { Sidebar } from "@/components/chat/Sidebar";
 import { MessageArea } from "@/components/chat/MessageArea";
 import { InputBar } from "@/components/chat/InputBar";
 import { ShareModal } from "@/components/chat/ShareModal";
+import { PricingModal } from "@/components/chat/PricingModal";
 import type {
   Conversation,
   ChatMsg,
@@ -67,6 +68,7 @@ function ChatPage() {
   const [responseTone, setResponseTone] = useState<ResponseTone>("direct");
   const [showConfig, setShowConfig] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
+  const [pricingOpen, setPricingOpen] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const active = conversations.find((c) => c.id === activeId)!;
@@ -167,6 +169,7 @@ function ChatPage() {
         onMenuToggle={setMenuOpenId}
         onCloseSidebar={() => setSidebarOpen(false)}
         onLogout={() => navigate({ to: "/login" })}
+        onUpgrade={() => setPricingOpen(true)}
       />
 
       <div className="flex flex-1 flex-col min-w-0">
@@ -213,6 +216,7 @@ function ChatPage() {
       )}
 
       <ShareModal open={shareOpen} activeId={activeId} onClose={() => setShareOpen(false)} />
+      <PricingModal open={pricingOpen} onClose={() => setPricingOpen(false)} />
     </div>
   );
 }

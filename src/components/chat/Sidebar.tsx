@@ -1,5 +1,15 @@
 import { useNavigate } from "@tanstack/react-router";
-import { Plus, MessageSquare, MoreHorizontal, Pencil, Trash2, X, User, LogOut } from "lucide-react";
+import {
+  Plus,
+  MessageSquare,
+  MoreHorizontal,
+  Pencil,
+  Trash2,
+  X,
+  User,
+  LogOut,
+  Zap,
+} from "lucide-react";
 import { RetroButton } from "@/components/retro-ui";
 import logo from "@/assets/logo.png";
 import type { Conversation } from "./types";
@@ -20,6 +30,7 @@ interface Props {
   onMenuToggle: (id: string | null) => void;
   onCloseSidebar: () => void;
   onLogout: () => void;
+  onUpgrade: () => void;
 }
 
 export function Sidebar({
@@ -38,6 +49,7 @@ export function Sidebar({
   onMenuToggle,
   onCloseSidebar,
   onLogout,
+  onUpgrade,
 }: Props) {
   const navigate = useNavigate();
 
@@ -126,6 +138,16 @@ export function Sidebar({
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* Upgrade banner */}
+      <div className="px-3 py-3 border-t-2 border-foreground">
+        <button
+          onClick={onUpgrade}
+          className="flex w-full items-center justify-center gap-2 rounded-sm bg-primary px-3 py-2 text-sm font-bold retro-border retro-shadow-sm hover:translate-x-[-1px] hover:translate-y-[-1px] hover:retro-shadow transition-all"
+        >
+          <Zap className="h-3.5 w-3.5" /> Upgrade to Pro
+        </button>
       </div>
 
       {/* User section */}

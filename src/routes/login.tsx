@@ -32,8 +32,14 @@ function LoginPage() {
           <span className="font-display text-2xl">GPTease</span>
         </Link>
         <div>
-          <h2 className="font-display text-5xl uppercase leading-[0.95]">Create more.<br/>Filter less.</h2>
-          <p className="mt-4 text-base max-w-sm">Your unfiltered AI co-writer for scripts, captions and DMs.</p>
+          <h2 className="font-display text-5xl uppercase leading-[0.95]">
+            Create more.
+            <br />
+            Filter less.
+          </h2>
+          <p className="mt-4 text-base max-w-sm">
+            Your unfiltered AI co-writer for scripts, captions and DMs.
+          </p>
         </div>
         <p className="text-sm">"Put my whole content workflow on autopilot." — @creator</p>
       </div>
@@ -47,7 +53,12 @@ function LoginPage() {
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             <div>
               <label className="font-bold text-sm">Email</label>
-              <RetroInput type="email" placeholder="you@studio.com" required defaultValue="demo@gptease.ai" />
+              <RetroInput
+                type="email"
+                placeholder="you@studio.com"
+                required
+                defaultValue="demo@gptease.ai"
+              />
             </div>
             <div>
               <div className="flex items-center justify-between">
@@ -57,7 +68,11 @@ function LoginPage() {
               <RetroInput type="password" placeholder="••••••••" required defaultValue="demopass" />
             </div>
             <label className="flex items-center gap-2 text-sm">
-              <input type="checkbox" className="h-4 w-4 retro-border accent-foreground" defaultChecked />
+              <input
+                type="checkbox"
+                className="h-4 w-4 retro-border accent-foreground"
+                defaultChecked
+              />
               Remember me
             </label>
             <RetroButton type="submit" size="lg" className="w-full" disabled={loading}>
@@ -66,7 +81,8 @@ function LoginPage() {
           </form>
 
           <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground">
-            <div className="h-px flex-1 bg-foreground" /> OR <div className="h-px flex-1 bg-foreground" />
+            <div className="h-px flex-1 bg-foreground" /> OR{" "}
+            <div className="h-px flex-1 bg-foreground" />
           </div>
 
           <div className="grid grid-cols-2 gap-3">
@@ -75,7 +91,10 @@ function LoginPage() {
           </div>
 
           <p className="mt-6 text-center text-sm">
-            New here? <Link to="/onboarding" className="font-bold underline">Create an account</Link>
+            New here?{" "}
+            <Link to="/onboarding" className="font-bold underline">
+              Create an account
+            </Link>
           </p>
         </RetroCard>
       </div>

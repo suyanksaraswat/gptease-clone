@@ -9,10 +9,10 @@ export const Route = createFileRoute("/profile")({
 
 const usage = {
   interactions: { used: 1, limit: 8 },
-  images:       { used: 0, limit: 1 },
-  pdfs:         { used: 0, limit: 0 },
-  canvas:       { used: 0, limit: 0 },
-  think:        { used: 0, limit: 8 },
+  images: { used: 0, limit: 1 },
+  pdfs: { used: 0, limit: 0 },
+  canvas: { used: 0, limit: 0 },
+  think: { used: 0, limit: 8 },
 };
 
 function UsageBar({ label, used, limit }: { label: string; used: number; limit: number }) {
@@ -70,8 +70,7 @@ function ProfilePage() {
               <h2 className="font-display text-lg mb-1">Current plan</h2>
               <p className="text-sm font-medium">Free trial plan</p>
               <p className="text-sm text-muted-foreground mt-0.5">
-                Remaining trial days:{" "}
-                <span className="font-bold text-foreground">6</span>
+                Remaining trial days: <span className="font-bold text-foreground">6</span>
               </p>
             </div>
             <span className="rounded-sm bg-primary px-3 py-1 text-sm font-bold retro-border retro-shadow-sm">
@@ -90,10 +89,10 @@ function ProfilePage() {
           <h2 className="font-display text-lg mb-4">Daily use</h2>
           <div className="space-y-4">
             <UsageBar label="Overall Interactions" {...usage.interactions} />
-            <UsageBar label="Image usage"          {...usage.images} />
-            <UsageBar label="PDF usage"            {...usage.pdfs} />
-            <UsageBar label="Canvas AI"            {...usage.canvas} />
-            <UsageBar label="Think"                {...usage.think} />
+            <UsageBar label="Image usage" {...usage.images} />
+            <UsageBar label="PDF usage" {...usage.pdfs} />
+            <UsageBar label="Canvas AI" {...usage.canvas} />
+            <UsageBar label="Think" {...usage.think} />
           </div>
         </RetroCard>
 
@@ -108,11 +107,7 @@ function ProfilePage() {
           >
             <LogOut className="h-4 w-4" /> Log out
           </RetroButton>
-          <RetroButton
-            variant="accent"
-            size="sm"
-            className="w-full justify-start"
-          >
+          <RetroButton variant="accent" size="sm" className="w-full justify-start">
             <Trash2 className="h-4 w-4" /> Delete account
           </RetroButton>
         </RetroCard>

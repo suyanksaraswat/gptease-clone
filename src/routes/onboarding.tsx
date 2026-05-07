@@ -38,7 +38,9 @@ function Onboarding() {
                 {i < step ? <Check className="h-5 w-5" /> : String(i + 1).padStart(2, "0")}
               </div>
               {i < steps.length - 1 && (
-                <div className={`h-1 flex-1 retro-border ${i < step ? "bg-primary" : "bg-background"}`} />
+                <div
+                  className={`h-1 flex-1 retro-border ${i < step ? "bg-primary" : "bg-background"}`}
+                />
               )}
             </li>
           ))}
@@ -59,7 +61,10 @@ function Onboarding() {
                 </div>
                 <div>
                   <label className="font-bold text-sm">Niche</label>
-                  <RetroInput placeholder="e.g. cosplay, fitness, GFE" defaultValue="GFE / cosplay" />
+                  <RetroInput
+                    placeholder="e.g. cosplay, fitness, GFE"
+                    defaultValue="GFE / cosplay"
+                  />
                 </div>
               </div>
             )}
@@ -72,7 +77,9 @@ function Onboarding() {
                       key={p}
                       type="button"
                       onClick={() =>
-                        setPlatforms((prev) => (active ? prev.filter((x) => x !== p) : [...prev, p]))
+                        setPlatforms((prev) =>
+                          active ? prev.filter((x) => x !== p) : [...prev, p],
+                        )
                       }
                       className={`rounded-sm retro-border p-3 font-bold transition-transform ${
                         active ? "bg-primary retro-shadow" : "bg-background"
@@ -107,7 +114,9 @@ function Onboarding() {
                   <Check className="h-8 w-8" />
                 </div>
                 <h2 className="font-display text-2xl uppercase mt-4">You're all set!</h2>
-                <p className="text-muted-foreground mt-2">Let's open the chat and write something spicy.</p>
+                <p className="text-muted-foreground mt-2">
+                  Let's open the chat and write something spicy.
+                </p>
               </div>
             )}
           </div>
